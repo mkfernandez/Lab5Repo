@@ -1,0 +1,29 @@
+/*
+ * patientHeader.h
+ *
+ *  Created on: Oct 23, 2014
+ *      Author: Kyle
+ */
+
+#ifndef PATIENTHEADER_H_
+#define PATIENTHEADER_H_
+
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+/*-----------------CLASSES----------------------*/
+enum condition_t {Unknown, Release, Test, Labour, Admit};
+
+class patientinfo {
+private:
+	stringstream ss;
+	string firstname, lastname, healthcard;
+	int bednum, dilation, contraction;
+	condition_t condition;
+public:
+	void enterinfo(string);
+	void displaypatient();
+};
+#endif /* PATIENTHEADER_H_ */
