@@ -3,11 +3,10 @@
 // */
 
 #include "patientHeader.h"
-#include "Register.h"
 
 void information(queue *q) {
 	string mystr;
-	patientinfo patient;
+	patientinfo *patient;
 	int patientnum = 0, choice;
 	bool esc;
 	do{
@@ -20,12 +19,12 @@ void information(queue *q) {
 				<< "]\nPlease enter the patients first name, last name, health card #, bed #, contraction rate, and cervix dilation (in cm)\n>>";
 		cin.ignore();
 		getline(cin, mystr);
-		q->insert(mystr);
+		q->insert(mystr, patient);
 	} else if (choice == 2) {
 		cout << "Enter the patient you would like to view:\n>> ";
 		cin >> patientnum;
 		cout << "\n\n[Viewing Patient: " << patientnum << "]\n";
-		patient.displaypatient();
+		q->display(patientnum, patient);
 	} else if (choice == 3) {
 		esc = true;
 	}

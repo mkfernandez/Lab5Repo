@@ -24,6 +24,7 @@ private:
 	int bednum, dilation, contraction;
 	condition_t condition;
 public:
+	void enterinfo(string);
 	void displaypatient();
 };
 
@@ -37,7 +38,8 @@ class queue{
 public:
 	queue();
 	~queue();
-	void insert(string);
+	void insert(string, patientinfo *);
+	int display(int, patientinfo *);
 	int remove();
 	int isEmpty();
 	int isFull();
