@@ -22,6 +22,3 @@ void patientinfo::displaypatient() {
 			<< " " << bednum << " " << dilation << " "
 			<< contraction;
 }
-
-
-

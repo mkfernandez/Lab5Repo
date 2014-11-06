@@ -20,4 +20,5 @@ using namespace std;
 void information(queue *q);
 //void examinePatient(int *amt, patientinfo *patient);
 
+
 #endif /* MAINHEADER_H_ */

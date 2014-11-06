@@ -44,5 +44,4 @@ public:
 /*-------Making the register--------*/
 
 
-
 #endif /* PATIENTHEADER_H_ */

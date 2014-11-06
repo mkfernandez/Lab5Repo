@@ -7,7 +7,7 @@ queue::queue() {
 }
 
 queue::~queue() {
-	delete []reg;
+	delete[] reg;
 }
 
 void queue::insert(int i) {
@@ -44,7 +44,4 @@ int queue::isFull() {
 		return (0);
 	}
 }
-
-
-
 

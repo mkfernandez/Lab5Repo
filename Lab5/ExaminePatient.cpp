@@ -14,3 +14,4 @@ void examinePatient(int *amt, patientinfo patient){
 
 
 
+
