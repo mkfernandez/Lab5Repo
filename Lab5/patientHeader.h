@@ -15,9 +15,22 @@
 using namespace std;
 
 /*-----------------CLASSES----------------------*/
+class queue{
+	int reg[SIZE];
+	int front;
+	int rear;
+public:
+	queue();
+	~queue();
+	void insert(int);
+	int remove();
+	int isEmpty();
+	int isFull();
+};
+
 enum condition_t {Unknown, Release, Test, Labour, Admit};
 
-class patientinfo {
+class patientinfo : public queue {
 private:
 	stringstream ss;
 	string firstname, lastname, healthcard;
@@ -30,19 +43,6 @@ public:
 
 /*-------Making the register--------*/
 
-class queue{
-	int reg[SIZE];
-	int front;
-	int rear;
-	stringstream ss;
-public:
-	queue();
-	~queue();
-	void insert(string, patientinfo *);
-	int display(int, patientinfo *);
-	int remove();
-	int isEmpty();
-	int isFull();
-};
+
 
 #endif /* PATIENTHEADER_H_ */

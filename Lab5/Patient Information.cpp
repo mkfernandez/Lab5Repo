@@ -4,10 +4,9 @@
 
 #include "patientHeader.h"
 
-void information(queue *q) {
+void information(patientinfo *patient) {
 	string mystr;
-	patientinfo *patient;
-	int patientnum = 0, choice;
+	int patientnum = 0, choice, i;
 	bool esc;
 	do{
 	cout << "\n\n-------------------------\n";
@@ -19,12 +18,13 @@ void information(queue *q) {
 				<< "]\nPlease enter the patients first name, last name, health card #, bed #, contraction rate, and cervix dilation (in cm)\n>>";
 		cin.ignore();
 		getline(cin, mystr);
-		q->insert(mystr, patient);
+		patient->
+		//enter info function goes here
 	} else if (choice == 2) {
 		cout << "Enter the patient you would like to view:\n>> ";
 		cin >> patientnum;
 		cout << "\n\n[Viewing Patient: " << patientnum << "]\n";
-		q->display(patientnum, patient);
+		//display function goes here
 	} else if (choice == 3) {
 		esc = true;
 	}

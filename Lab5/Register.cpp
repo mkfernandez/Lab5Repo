@@ -10,23 +10,14 @@ queue::~queue() {
 	delete []reg;
 }
 
-void queue::insert(string mystr, patientinfo *patient) {
+void queue::insert(int i) {
 	if (isFull()) {
 		cout << "Patient Register is full, please try again later.";
 	} else {
-		reg[rear].patient->enterinfo(mystr);
+		reg[rear] = i;
 		rear++;
 	}
 	return;
-}
-
-int queue::display(int i, patientinfo *patient) {
-	if (isEmpty()) {
-		cout << "Patient Register is now empty, please add a patient";
-		return (-9999);
-	} else {
-		//patient->displaypatient(i);
-	}
 }
 
 int queue::remove() {
@@ -53,6 +44,7 @@ int queue::isFull() {
 		return (0);
 	}
 }
+
 
 
 

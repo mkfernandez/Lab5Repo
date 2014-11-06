@@ -6,9 +6,9 @@
 #include "patientHeader.h"
 
 int main(void) {
-	int amt = 0;
 	bool quit;
-	queue *q;
+	patientinfo patient;
+	patient.queue();
 	string mystr;
 	int choice = 0;
 	do{
@@ -17,7 +17,7 @@ int main(void) {
 	cin >> choice;
 		switch (choice) {
 		case 1:
-			information(q);
+			information(&patient);
 			cout << endl;
 			break;
 		case 2:
@@ -27,6 +27,7 @@ int main(void) {
 			break;
 		case 4:
 			quit = true;
+			patient.~queue();
 			break;
 		default:
 			cout << "----Invalid option----";
