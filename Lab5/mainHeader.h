@@ -14,12 +14,10 @@
 #include <istream>
 #include <cstdlib>
 #include "patientHeader.h"
-
-#define MAX_PATIENTS 100
 using namespace std;
 
 /*---------------------FUNCTION PROTOTYPES--------------------------*/
-void information(int *amt, patientinfo *patient);
+void information(queue *q);
 //void examinePatient(int *amt, patientinfo *patient);
 
 #endif /* MAINHEADER_H_ */

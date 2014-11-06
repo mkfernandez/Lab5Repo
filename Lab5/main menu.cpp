@@ -8,9 +8,8 @@
 int main(void) {
 	int amt = 0;
 	bool quit;
-
+	queue *q;
 	string mystr;
-	patientinfo patient[MAX_PATIENTS];
 	int choice = 0;
 	do{
 	cout << "Please Enter an option\n======================\n";
@@ -18,7 +17,7 @@ int main(void) {
 	cin >> choice;
 		switch (choice) {
 		case 1:
-			information(&amt, patient);
+			information(q);
 			cout << endl;
 			break;
 		case 2:

@@ -11,6 +11,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#define SIZE 100
 using namespace std;
 
 /*-----------------CLASSES----------------------*/
@@ -23,7 +24,23 @@ private:
 	int bednum, dilation, contraction;
 	condition_t condition;
 public:
-	void enterinfo(string);
 	void displaypatient();
 };
+
+/*-------Making the register--------*/
+
+class queue{
+	int reg[SIZE];
+	int front;
+	int rear;
+	stringstream ss;
+public:
+	queue();
+	~queue();
+	void insert(string);
+	int remove();
+	int isEmpty();
+	int isFull();
+};
+
 #endif /* PATIENTHEADER_H_ */
